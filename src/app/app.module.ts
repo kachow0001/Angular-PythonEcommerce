@@ -6,13 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './panel.component';
+import { AppRoutingModule } from './panel-routing.module';
+import { PanelComponent } from './panel.component';
+import { NavbarComponent } from './nav.component';
+import { TableModule} from 'primeng/table';
 
 
 @NgModule({
   declarations: [
-    PanelComponent
+    PanelComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { AppComponent } from './panel.component';
     FormsModule,
     AccordionModule,
     PanelModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [ ],
   bootstrap: [PanelComponent]
