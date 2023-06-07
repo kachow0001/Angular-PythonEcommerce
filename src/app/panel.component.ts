@@ -1,10 +1,9 @@
-import { Component, ViewEncapsulation,OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'panel-bar',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css'],
-  encapsulation: ViewEncapsulation.None
+  /*styleUrls: ['./panel.component.css']*/
 
 })
 export class PanelComponent implements OnInit {

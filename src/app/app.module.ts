@@ -8,14 +8,14 @@ import { PanelModule } from 'primeng/panel';
 import { ButtonModule } from 'primeng/button';
 import { AppRoutingModule } from './panel-routing.module';
 import { PanelComponent } from './panel.component';
-import { NavbarComponent } from './nav.component';
+import { AppComponent } from './app.component';
 import { TableModule} from 'primeng/table';
 
 
 @NgModule({
   declarations: [
-    PanelComponent,
-    NavbarComponent
+    AppComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,6 @@ import { TableModule} from 'primeng/table';
     TableModule
   ],
   providers: [ ],
-  bootstrap: [PanelComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
