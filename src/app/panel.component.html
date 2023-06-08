@@ -1,22 +1,75 @@
 <!DOCTYPE html>
-<html> 
-    <!-- Nav As a link -->
-   <nav class="navbar navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
-        
-      </div>
-    </nav>  <!-- Body content -->
+<html>
 
-    <div class = "container mt-4">
-      <div class ="col-md-2"> 
-        <div class ="row"> FilterBy: </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <title>Bootstrap Navbar and Table</title>
+</head>
 
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        {{title}}
+      </a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
     </div>
+  </nav>
+
+  <!-- Body content -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="row">FilterBy:</div>
+      </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr> 
+                <th scope="col">Title</th>
+                <th scope="col">Year</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Director</th>
+                <th scope="col">Plot</th>
+                <th scope="col">Language</th>
+                <th scope="col"> 
+                  <button type ="button" class ="btn btn-success"
+                    (click)= "toggleImage()">
+                    Show Postor 
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor= "let items of movies">
+                
+                <td>{{items.Title}}</td>
+                <td>{{items.Year}}</td>
+                <td>{{items.Genre}}</td>
+                <td>{{items.Director}}</td>
+                <td>{{items.Language}}</td>
+                <td>{{items.Plot}}</td>
+                <td>
+                  <img [src]= "items.Poster" width="250" height="250"
+                    *ngIf ="showImage"/>
+
+                </td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
-
-
