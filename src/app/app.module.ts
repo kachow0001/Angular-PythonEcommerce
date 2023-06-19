@@ -26,7 +26,7 @@ import { TableModule} from 'primeng/table';
     AccordionModule,
     PanelModule,
     ButtonModule,
-    TableModule
+    TableModule,
   ],
   providers: [ ],
   bootstrap: [AppComponent]
